@@ -7,6 +7,7 @@ class Location < ActiveRecord::Base
   has_many :posts
   has_many :follows
   has_many :users, :through => :follows
+  has_many :checkins
   def to_hash
   {
     :name => self.name,

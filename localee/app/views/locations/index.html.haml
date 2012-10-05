@@ -8,6 +8,8 @@
         %a{:data => {:toggle => "tab"}, :href => "#following_locations" } Following Locations
       %li
         %a{:data => {:toggle => "tab"}, :href => "#create_location", :id => "create_tab_btn" } Create New Location
+      %li
+        %a{:data => {:toggle => "tab"}, :href => "#check_in"} Checkin To A Location
 
     %div.tab-content
       %div#nearby_locations.tab-pane.active
@@ -22,6 +24,10 @@
         %hr/
         -@following_locations.each do |loc|
           =render "locations/location", :location => loc
+
+      %div#check_in.tab-pane
+        %h3 Where You At?
+          
 
       %div#create_location.tab-pane
         %h3 Create a new Location
